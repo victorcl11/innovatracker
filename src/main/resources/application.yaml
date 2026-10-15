@@ -5,7 +5,7 @@ spring:
     virtual:
       enabled: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/innovatracker
+    url: jdbc:postgresql://localhost:5432/innovatracker?currentSchema=innova
     username: postgres
     password: ceub123456
     driver-class-name: org.postgresql.Driver
@@ -30,11 +30,10 @@ app:
 
 
 springdoc:
-  api-docs:
-    path: /api-docs
   swagger-ui:
-    path: /swagger-ui.html
     operationsSorter: method
+    tagsSorter: alpha
+    doc-expansion: none
 
 
 management:
